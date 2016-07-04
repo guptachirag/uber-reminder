@@ -1,0 +1,4 @@
+Django==1.9.7
+djangorestframework==3.3.3
+python-http-client==2.1.0
+requests==2.10.0

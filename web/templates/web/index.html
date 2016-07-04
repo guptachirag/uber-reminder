@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+  <head>
+    <title>Uber Reminder</title>
+  </head>
+  <body>
+    <form id="reminder" method="post" data-uber="{% url 'web:uber' %}" data-maps="{% url 'web:maps' %}" data-email="{% url 'web:email' %}">
+      <fieldset>
+        <legend>Source</legend>
+        Latitude<input type="number" step="0.0000001" name="slat"/>
+        Longitude<input type="number" step="0.0000001" name="slon"/>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Destination</legend>
+        Latitude<input type="number" step="0.0000001" name="elat"/>
+        Longitude<input type="number" step="0.0000001" name="elon"/>
+      </fieldset>
+      <br>
+      <label>Time<label>
+      <input type="time" name="time"/>
+      <br>
+      <br>
+      <label>Email<label>
+      <input type="email" name="email"/>
+      <br>
+      <br>
+      <button>Set Reminder</button>
+    </form>
+    <div id="log">
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="{% static 'web/js/main.js' %}"></script>
+  </body>
+</html>
