@@ -11,11 +11,11 @@ It find the time to travel between Source and Destination using Maps API
 
 After that 
 It calculates the difference between current time and time given by user,
-call that remaining time.
+#####call that remaining time.
 
-It calculates the difference the sum of uberGO time and maps time + 1h
-{Here 1 hour is taken to handle traffic variations}
+It calculates the sum of uberGO time and maps time + 1h, {Here 1 hour is taken to handle traffic variations}
+#####call that sum
 
-then the calculates new remaining time is remaining time - sum
+then it calculates the new remaining time i.e. remaining time - sum
 
 After this it waits for the remaining time and recursively follow the above steps.
